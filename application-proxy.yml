@@ -1,0 +1,17 @@
+server:
+  port: 3434
+  
+eureka:
+  client:
+  # this app itseld eureka
+    register-with-eureka: true
+  # Not cacheable
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+zuul:
+  prefix: /api
+  routes:
+    hello-abc:
+     path: /proxy/**
+     service-id: CUSTOMER-SERVICE-PROD
