@@ -14,4 +14,4 @@ zuul:
   routes:
     hello-abc:
      path: /proxy/**
-     service-id: CUSTOMER-SERVICE-PROXY
+     service-id: CUSTOMER-SERVICE-MYSQL-PROD
